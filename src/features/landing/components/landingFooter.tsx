@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Github, Linkedin, Mail, Instagram } from "lucide-react";
 
 // 6. Import Assets
-import mapArt from "@/shared/assets/map.png";
+import guyPhoto from "@/shared/assets/guey.webp";
 
 // 7. Static Data
 const socialLinks = [
@@ -16,8 +16,8 @@ const socialLinks = [
 export default function LandingFooter() {
   return (
     <footer className="relative overflow-hidden border-t border-surface-border/60 bg-black py-24 sm:py-32">
-      <div className="pointer-events-none absolute bottom-0 left-[38%] h-64 w-[820px] opacity-70 mix-blend-screen [mask-image:linear-gradient(to_right,black_45%,transparent_90%)] sm:h-80 sm:w-[980px] lg:h-[440px] lg:w-[1200px]">
-        <Image src={mapArt} alt="" fill className="object-cover object-left" />
+      <div className="pointer-events-none absolute bottom-0 right-6 h-64 w-56 sm:right-10 sm:h-80 sm:w-72 lg:right-20 lg:h-96 lg:w-80">
+        <Image src={guyPhoto} alt="" fill className="object-contain object-bottom" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
