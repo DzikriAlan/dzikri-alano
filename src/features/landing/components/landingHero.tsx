@@ -80,14 +80,26 @@ export default function LandingHero() {
           </div>
         </div>
 
-        <div className="relative order-1 mx-auto aspect-square w-full max-w-xl md:order-2">
-          {/* Backdrop art, fitted exactly to the frame */}
+        <div className="relative order-1 mx-auto aspect-square w-full max-w-3xl md:order-2">
+          {/* Backdrop art, fitted exactly to the frame. Sharp center that fades into a
+              blurred copy of itself toward the edges, so cropped edges feel smooth. */}
           <div className="absolute inset-0 overflow-hidden rounded-[2.5rem]">
-            <Image src={heroArt} alt="" fill className="object-cover" />
+            <Image
+              src={heroArt}
+              alt=""
+              fill
+              className="scale-105 object-cover blur-md"
+            />
+            <Image
+              src={heroArt}
+              alt=""
+              fill
+              className="object-cover [mask-image:radial-gradient(ellipse_closest-side_at_center,black_40%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_closest-side_at_center,black_40%,transparent_100%)]"
+            />
           </div>
 
           {/* Subject cutout, floating above the backdrop art */}
-          <div className="absolute -inset-y-10 inset-x-0">
+          <div className="absolute inset-0">
             <Image
               src={heroPhoto}
               alt="Dzikri Alan"
