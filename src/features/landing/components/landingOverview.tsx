@@ -3,7 +3,7 @@
 // 1. Import External Library
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, MessageCircle, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 
 // 5. Import Reusable Component
 import { Button } from "@/components/ui/button";
@@ -12,10 +12,20 @@ import { Button } from "@/components/ui/button";
 import { landingSkills, landingTestimonials } from "../static/landingData";
 
 const frontendSkills = landingSkills.filter((skill) =>
-  ["Vue.js", "Next.js", "React", "TypeScript", "Tailwind CSS"].includes(
-    skill.label,
-  ),
+  [
+    "Vue.js",
+    "Nuxt.js",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "Tailwind CSS",
+    "HTML",
+    "CSS",
+  ].includes(skill.label),
 );
+
+const AI_PROFICIENCY_SCORE = 90;
 
 export default function LandingOverview() {
   // 8. State
@@ -177,23 +187,25 @@ export default function LandingOverview() {
             </div>
 
             <div className="relative flex-1 overflow-hidden rounded-2xl border border-surface-border bg-black p-6">
-              <h3 className="font-semibold text-foreground">
-                AI Engineering
-              </h3>
-              <p className="mt-2 text-sm text-neutral-300">
-                Engineering AI chat interfaces with real-time streaming and
-                LLM integration.
-              </p>
-              <div className="relative mt-6 flex h-20 items-center gap-2 rounded-xl border border-brand/30 bg-neutral-900 px-4">
-                <Sparkles className="size-4 shrink-0 text-brand" />
-                <div className="flex-1 space-y-1.5">
-                  <div className="h-1.5 w-full rounded-full bg-neutral-700" />
-                  <div className="h-1.5 w-2/3 rounded-full bg-neutral-700" />
-                </div>
-                <span className="absolute -bottom-2 right-3 rounded-full bg-brand px-2 py-0.5 text-[10px] font-semibold text-neutral-950 shadow-soft">
-                  Claude Code
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="font-semibold text-foreground">
+                  Frontend AI Application Specialist
+                </h3>
+                <span className="shrink-0 rounded-full bg-brand/10 px-2 py-0.5 text-xs font-semibold text-brand">
+                  {AI_PROFICIENCY_SCORE}/100
                 </span>
               </div>
+              <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-neutral-800">
+                <div
+                  className="h-full rounded-full bg-brand"
+                  style={{ width: `${AI_PROFICIENCY_SCORE}%` }}
+                />
+              </div>
+              <p className="mt-3 text-sm text-neutral-300">
+                Prompt and context engineering, LLM integration, and
+                AI-driven code generation across chat interfaces, semantic
+                search, and MCP servers.
+              </p>
             </div>
           </div>
         </div>

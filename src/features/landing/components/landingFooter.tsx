@@ -1,9 +1,5 @@
 // 1. Import External Library
-import Image from "next/image";
 import { Github, Linkedin, Mail, Instagram } from "lucide-react";
-
-// 6. Import Assets
-import guyPhoto from "@/shared/assets/guey.webp";
 
 // 7. Static Data
 const socialLinks = [
@@ -15,12 +11,8 @@ const socialLinks = [
 
 export default function LandingFooter() {
   return (
-    <footer className="relative overflow-hidden border-t border-surface-border/60 bg-black py-24 sm:py-32">
-      <div className="pointer-events-none absolute bottom-0 right-6 h-64 w-56 sm:right-10 sm:h-80 sm:w-72 lg:right-20 lg:h-96 lg:w-80">
-        <Image src={guyPhoto} alt="" fill className="object-contain object-bottom" />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
+    <footer className="border-t border-surface-border/60 bg-black py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <h2 className="max-w-2xl text-3xl font-normal leading-tight text-foreground sm:text-4xl lg:text-5xl">
           It&apos;s time to build your next web project. Let&apos;s work
           together and deliver success.

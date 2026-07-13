@@ -6,12 +6,12 @@ import Head from "next/head";
 import LandingHero from "@/features/landing/components/landingHero";
 import LandingOverview from "@/features/landing/components/landingOverview";
 import LandingStrategy from "@/features/landing/components/landingStrategy";
-import LandingServices from "@/features/landing/components/landingServices";
+import LandingFaq from "@/features/landing/components/landingFaq";
 import LandingWork from "@/features/landing/components/landingWork";
 import LandingFooter from "@/features/landing/components/landingFooter";
 import { useScrollSpy } from "@/features/landing/hooks/useScrollSpy";
 
-const SECTION_IDS = ["home", "services", "work"];
+const SECTION_IDS = ["home", "work"];
 
 const Home: NextPage = () => {
   useScrollSpy(SECTION_IDS);
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <LandingOverview />
         <LandingWork />
         <LandingStrategy />
-        <LandingServices />
+        <LandingFaq />
         <LandingFooter />
       </main>
     </>

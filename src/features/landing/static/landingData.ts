@@ -1,12 +1,4 @@
-import {
-  Code2,
-  Box,
-  Zap,
-  Globe,
-  Star,
-  CheckCircle2,
-  Layers,
-} from "lucide-react";
+import { Star, CheckCircle2, Layers } from "lucide-react";
 
 import blayerPorto from "@/shared/assets/blayer-porto.png";
 import chaplinPorto from "@/shared/assets/chaplin-porto.png";
@@ -33,30 +25,31 @@ export const landingSkills = [
   { label: "CSS", icon: "/skills/css.svg" },
 ];
 
-export const landingServices = [
+export const landingFaqs = [
   {
-    icon: Code2,
-    title: "Frontend Architecture",
-    description:
-      "Designing and implementing scalable frontend architecture using Vue, React, Next.js, and TypeScript across production products.",
+    question: "What projects do you work on?",
+    answer:
+      "Mostly AI-driven web products and full-stack platforms — interactive AI chat interfaces, geospatial and statistical data visualization, semantic search, and fact-checking tools, alongside production SaaS work like Chaplin, Blayer, and Casetudy.",
   },
   {
-    icon: Box,
-    title: "AI Chat Interfaces",
-    description:
-      "Engineering interactive AI chat interfaces with real-time data streaming (SSE/WebSockets) and robust state management.",
+    question: "Do you work remotely or on-site?",
+    answer:
+      "I'm based in Bandung, Jawa Barat, and work remotely with teams and clients across time zones — I've done this for 3 years at Kazee Digital Indonesia and Surya Microsystems, collaborating async with cross-functional teams.",
   },
   {
-    icon: Zap,
-    title: "Data Visualization",
-    description:
-      "Building geospatial and statistical visualization tools with Mapbox GL JS, Tegola, and complex charting libraries.",
+    question: "What's your tech stack and tooling?",
+    answer:
+      "Vue.js, Nuxt, Next.js, React, and TypeScript on the frontend; Node.js, NestJS, Prisma, and PostgreSQL on the backend; plus SSE/WebSockets for real-time streaming and Claude Code, DeepSeek, and prompt engineering for AI-driven workflows.",
   },
   {
-    icon: Globe,
-    title: "API Integration",
-    description:
-      "Optimizing prompt-driven API generation and high-performance API integration to speed up development turnaround.",
+    question: "Can I see more of your work?",
+    answer:
+      "Yes — check the Experience & Projects section above for case studies like Chaplin, Blayer, Kazee Smartboard, and the LSP Exam System, or reach out directly for a deeper walkthrough.",
+  },
+  {
+    question: "How can I start a new project?",
+    answer:
+      "Send me an email or a message on WhatsApp with a short brief of what you're building — I'll get back to you to discuss requirements, scope, and timeline in more detail.",
   },
 ];
 
