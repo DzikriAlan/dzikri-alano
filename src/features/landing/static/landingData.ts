@@ -1,7 +1,7 @@
 import { Star, CheckCircle2, Layers } from "lucide-react";
 
-import blayerPorto from "@/shared/assets/blayer-porto.png";
-import chaplinPorto from "@/shared/assets/chaplin-porto.png";
+import blayerPorto from "@/shared/assets/blayer-porto.webp";
+import chaplinPorto from "@/shared/assets/chaplin-porto.webp";
 
 export const landingHighlights = [
   { icon: Star, title: "3+ Years", subtitle: "Experience" },
@@ -60,7 +60,7 @@ export const landingExperience = [
     role: "Frontend Developer",
     description:
       "Designed scalable frontend architecture with Vue and TypeScript across 3 products, engineered interactive AI chat interfaces with real-time streaming, and automated API generation to cut development turnaround by 40%.",
-    logo: "/experience/kazee-logo.jpeg",
+    logo: "/experience/kazee-logo.webp",
     image: "/experience/kazee-activity.webp",
     current: true,
   },
@@ -70,7 +70,7 @@ export const landingExperience = [
     role: "Frontend Developer",
     description:
       "Applied component-based frontend approaches with Vue.js and Element Plus across concurrent client projects, and maintained production apps including the LSP Exam System, Cost Control App, and Village Website.",
-    logo: "/experience/surya-logo.jpeg",
+    logo: "/experience/surya-logo.webp",
     image: "/experience/surya-activity.webp",
     current: false,
   },
