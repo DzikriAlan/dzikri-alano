@@ -162,21 +162,17 @@ export const landingProjects = [
 export const landingTestimonials = [
   {
     quote:
-      "Great developer! Delivered high-quality work on time with excellent communication. Will hire again.",
-    name: "John Doe",
-    role: "CEO, TechStart",
+      "Dzikri is a reliable community partner — always ready to collaborate on projects and bring solid frontend execution to whatever we're building together.",
+    name: "Farhan Muhamad",
+    role: "Founder, Copetera",
+    linkedinUrl: "https://id.linkedin.com/in/farhan-muhamad",
   },
   {
     quote:
-      "Dzikri is very professional and skilled. He understands requirements quickly and provides the best solutions.",
-    name: "Sarah Lee",
-    role: "Product Manager",
-  },
-  {
-    quote:
-      "Amazing experience working with Dzikri. Highly recommended for any frontend projects!",
-    name: "Michael Wong",
-    role: "Founder, DevLaunch",
+      "As his lead at Surya Microsystems, I saw Dzikri consistently stabilize sprint velocity and keep several production apps running smoothly, all while clearly communicating progress to stakeholders.",
+    name: "Aulia Harvy",
+    role: "CEO, Surya Microsystems International",
+    linkedinUrl: "https://id.linkedin.com/in/auliaharvy",
   },
 ];
 

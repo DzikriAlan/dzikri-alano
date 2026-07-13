@@ -111,12 +111,17 @@ export default function LandingOverview() {
             </div>
 
             <div className="mt-8 flex items-center justify-between">
-              <div>
-                <p className="text-sm font-semibold text-foreground">
+              <a
+                href={testimonial.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <p className="text-sm font-semibold text-foreground group-hover:text-brand group-hover:underline">
                   {testimonial.name}
                 </p>
                 <p className="text-xs text-neutral-300">{testimonial.role}</p>
-              </div>
+              </a>
 
               <div className="flex items-center gap-4">
                 <div className="flex gap-2">
