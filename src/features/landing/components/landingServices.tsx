@@ -18,7 +18,7 @@ export default function LandingServices() {
   return (
     <section
       id="services"
-      className="relative scroll-mt-28 overflow-hidden px-6 py-20 lg:px-12 xl:px-20"
+      className="relative scroll-mt-28 overflow-hidden py-20"
     >
       {/* Decorative grid backdrop, only a soft band carried down from the Hero boundary. bg-fixed
           keeps the 48px grid locked to viewport coordinates so it lines up with Hero's identical grid. */}
@@ -33,13 +33,13 @@ export default function LandingServices() {
         ))}
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-12 xl:px-20">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="mb-2 font-mono text-sm font-medium uppercase tracking-widest text-brand">
               MY SERVICES
             </p>
-            <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            <h2 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
               How I can <span className="text-brand">help you</span>
             </h2>
           </div>

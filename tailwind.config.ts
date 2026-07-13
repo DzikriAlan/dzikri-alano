@@ -151,6 +151,7 @@ const config: Config = {
         glow: "glow 3s ease-in-out infinite",
         float: "float 6s ease-in-out infinite",
         grid: "grid 20s linear infinite",
+        marquee: "marquee 28s linear infinite",
       },
 
       keyframes: {
@@ -178,6 +179,15 @@ const config: Config = {
           },
           to: {
             backgroundPosition: "48px 48px",
+          },
+        },
+
+        marquee: {
+          from: {
+            transform: "translateX(0)",
+          },
+          to: {
+            transform: "translateX(-50%)",
           },
         },
       },

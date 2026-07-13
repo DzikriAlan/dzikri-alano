@@ -5,6 +5,7 @@ import Head from "next/head";
 // 5. Import Feature Components
 import LandingNavbar from "@/features/landing/components/landingNavbar";
 import LandingHero from "@/features/landing/components/landingHero";
+import LandingMarquee from "@/features/landing/components/landingMarquee";
 import LandingServices from "@/features/landing/components/landingServices";
 import LandingAbout from "@/features/landing/components/landingAbout";
 import LandingWork from "@/features/landing/components/landingWork";
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
       <main className="min-h-screen bg-neutral-950">
         <LandingNavbar />
         <LandingHero />
+        <LandingMarquee />
         <LandingServices />
         <LandingAbout />
         <LandingWork />

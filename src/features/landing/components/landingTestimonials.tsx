@@ -30,14 +30,14 @@ export default function LandingTestimonials() {
   };
 
   return (
-    <section id="testimonials" className="scroll-mt-28 px-6 py-20 lg:px-12 xl:px-20">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12 xl:px-20">
+    <section id="testimonials" className="scroll-mt-28 py-20">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <div className="flex items-end justify-between">
           <div>
             <p className="mb-2 font-mono text-sm font-medium uppercase tracking-widest text-brand">
               TESTIMONIALS
             </p>
-            <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            <h2 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
               What clients <span className="text-brand">say</span>
             </h2>
           </div>

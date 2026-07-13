@@ -1,7 +1,7 @@
 "use client";
 
 // 1. Import External Library
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 // 2. Import Types
@@ -16,17 +16,39 @@ import { landingNavLinks } from "../static/landingData";
 export default function LandingNavbar() {
   // 8. State
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const lastScrollYRef = useRef(0);
+
+  // 9. Effects
+  useEffect(() => {
+    lastScrollYRef.current = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollYRef.current;
+
+      setIsNavbarVisible(!isScrollingDown || currentScrollY < 50);
+      lastScrollYRef.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // 11. Methods / Handlers
   const handleToggleMenu = () => setIsMenuOpen((prev) => !prev);
   const handleCloseMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="sticky top-4 z-50 px-6 lg:px-12 xl:px-20">
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-12 xl:px-20">
+    <header
+      className={`sticky top-4 z-50 transition-transform duration-300 ease-in-out ${
+        isNavbarVisible ? "translate-y-0" : "-translate-y-[150%]"
+      }`}
+    >
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <nav className="flex items-center justify-between rounded-lg border border-surface-border bg-neutral-950/90 px-6 py-4 shadow-soft backdrop-blur">
           <a href="#home" className="text-lg font-bold text-foreground">
-            <span className="text-brand">D</span> DzikriAlan
+            Dzikrialan
           </a>
 
           <ul className="hidden items-center gap-8 text-sm font-medium text-neutral-300 md:flex">

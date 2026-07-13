@@ -23,6 +23,22 @@ export const landingHighlights = [
   { icon: Layers, title: "Built", subtitle: "DzikriAlan" },
 ];
 
+export const landingSkills = [
+  { label: "Vue.js", icon: "/skills/vuejs.svg" },
+  { label: "Nuxt.js", icon: "/skills/nuxtjs.webp" },
+  { label: "React", icon: "/skills/react.svg" },
+  { label: "Next.js", icon: "/skills/nextjs.webp" },
+  { label: "TypeScript", icon: "/skills/typescript.svg" },
+  { label: "JavaScript", icon: "/skills/javascript.svg" },
+  { label: "Tailwind CSS", icon: "/skills/tailwind-css.svg" },
+  { label: "Node.js", icon: "/skills/nodejs.svg" },
+  { label: "PHP", icon: "/skills/php.svg" },
+  { label: "Laravel", icon: "/skills/laravel.svg" },
+  { label: "CodeIgniter", icon: "/skills/codeigniter.svg" },
+  { label: "HTML", icon: "/skills/html.svg" },
+  { label: "CSS", icon: "/skills/css.svg" },
+];
+
 export const landingServices = [
   {
     icon: Code2,
@@ -65,7 +81,7 @@ export const landingExperience = [
     description:
       "Designed scalable frontend architecture with Vue and TypeScript across 3 products, engineered interactive AI chat interfaces with real-time streaming, and automated API generation to cut development turnaround by 40%.",
     logo: "/experience/kazee-logo.jpeg",
-    image: "/experience/kazee-activity.png",
+    image: "/experience/kazee-activity.webp",
     current: true,
   },
   {
@@ -75,7 +91,7 @@ export const landingExperience = [
     description:
       "Applied component-based frontend approaches with Vue.js and Element Plus across concurrent client projects, and maintained production apps including the LSP Exam System, Cost Control App, and Village Website.",
     logo: "/experience/surya-logo.jpeg",
-    image: "/experience/surya-activity.png",
+    image: "/experience/surya-activity.webp",
     current: false,
   },
 ];
@@ -87,7 +103,7 @@ export const landingProjects = [
     description:
       "Contributed to maintenance such as bug fixing and the creation of the media relations sub-feature.",
     tags: ["Vue.js", "Pinia", "Mapbox GL JS"],
-    image: "/work/medmon.png",
+    image: "/work/medmon.webp",
   },
   {
     category: "AI Platform",
@@ -95,7 +111,7 @@ export const landingProjects = [
     description:
       "Contributed to the initial development, from the landing page to blog content management.",
     tags: ["Vue.js", "TypeScript"],
-    image: "/work/trendnowai.png",
+    image: "/work/trendnowai.webp",
   },
   {
     category: "Data Dashboard",
@@ -103,7 +119,7 @@ export const landingProjects = [
     description:
       "Contributed to design architecture planning and chatbot integration to analyze each widget's data.",
     tags: ["Vue.js", "SSE/WebSockets", "Pinia"],
-    image: "/work/smartboard.png",
+    image: "/work/smartboard.webp",
   },
   {
     category: "AI Search",
@@ -111,7 +127,7 @@ export const landingProjects = [
     description:
       "Contributed to design architecture planning and AI integration for semantic and contextual search.",
     tags: ["Vue.js", "AI Integration"],
-    image: "/work/aisearch.png",
+    image: "/work/aisearch.webp",
   },
   {
     category: "Education",
@@ -119,7 +135,7 @@ export const landingProjects = [
     description:
       "Contributed to the creation of many exam forms and determination of the exam application flow.",
     tags: ["Vue.js", "Laravel"],
-    image: "/work/lsp.png",
+    image: "/work/lsp.webp",
   },
   {
     category: "Finance",
@@ -127,7 +143,7 @@ export const landingProjects = [
     description:
       "Contributed to website maintenance, including bug fixing, dashboard feature optimization, and more.",
     tags: ["Vue.js", "CodeIgniter"],
-    image: "/work/cost.png",
+    image: "/work/cost.webp",
   },
   {
     category: "Government",
@@ -135,7 +151,7 @@ export const landingProjects = [
     description:
       "Contributed to the feature for community submission requests for personal document creation.",
     tags: ["Vue.js", "JavaScript"],
-    image: "/work/lurah.png",
+    image: "/work/lurah.webp",
   },
   {
     category: "Education",
@@ -143,7 +159,7 @@ export const landingProjects = [
     description:
       "Started from the need of students who wanted to register as members of the ICT extracurricular club.",
     tags: ["Vue.js", "TypeScript", "Tailwind CSS"],
-    image: "/work/ict.png",
+    image: "/work/ict.webp",
   },
   {
     category: "Business",
@@ -151,7 +167,7 @@ export const landingProjects = [
     description:
       "Helps new Vue 2 developers learn through a real-world app — covering auth, CRUD, and patterns useful as a first portfolio.",
     tags: ["Vue 2", "Vuex", "REST API"],
-    image: "/work/laundry.png",
+    image: "/work/laundry.webp",
   },
   {
     category: "Event",
@@ -159,7 +175,7 @@ export const landingProjects = [
     description:
       "Vendor recommendation platform for personal events like weddings, circumcisions, and birthdays.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    image: "/work/hacara.png",
+    image: "/work/hacara.webp",
   },
   {
     category: "E-commerce",
@@ -167,7 +183,7 @@ export const landingProjects = [
     description:
       "Helps sellers grow their business with vendor references and tools to streamline customer follow-ups.",
     tags: ["Vue.js", "Pinia", "Tailwind CSS"],
-    image: "/work/salestu.png",
+    image: "/work/salestu.webp",
   },
   {
     category: "Content",
@@ -175,7 +191,7 @@ export const landingProjects = [
     description:
       "Curates high-quality Product & Design case studies so anyone can learn from real experience easily and relevantly.",
     tags: ["Next.js", "Tailwind CSS"],
-    image: "/work/casetudy.png",
+    image: "/work/casetudy.webp",
   },
 ];
 

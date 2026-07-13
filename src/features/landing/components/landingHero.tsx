@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 
 // 7. Static Data
 import { landingHighlights } from "../static/landingData";
-import heroArt from "@/shared/assets/hero.png";
-import heroPhoto from "@/shared/assets/guey.png";
+import heroArt from "@/shared/assets/hero.webp";
+import heroPhoto from "@/shared/assets/guey.webp";
 
 const dotGridIds = [
   "a1", "a2", "a3", "a4",
@@ -21,7 +21,7 @@ export default function LandingHero() {
   return (
     <section
       id="home"
-      className="relative scroll-mt-28 overflow-hidden px-6 pb-32 pt-20 lg:px-12 xl:px-20"
+      className="relative scroll-mt-28 overflow-hidden pb-32 pt-20"
     >
       {/* Decorative grid backdrop, only a soft band near the Services boundary. bg-fixed keeps the
           48px grid locked to viewport coordinates so it lines up with Services' identical grid. */}
@@ -36,17 +36,17 @@ export default function LandingHero() {
         ))}
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 lg:px-12 xl:px-20">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 sm:px-8 md:grid-cols-2 lg:px-12 xl:px-20">
         <div className="order-2 md:order-1">
           <p className="mb-4 font-mono text-sm text-brand">
             {"< FRONTEND DEVELOPER />"}
           </p>
-          <h1 className="text-4xl font-bold leading-tight text-foreground sm:text-6xl">
+          <h1 className="text-3xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
             Hi, I&apos;m
             <br />
             <span className="text-brand">Dzikri Alan</span>
           </h1>
-          <p className="mt-6 max-w-md text-neutral-300">
+          <p className="mt-6 max-w-md text-base text-neutral-300 sm:text-lg">
             Frontend Developer with 3 years of experience building scalable,
             performant, and maintainable interfaces for various end-to-end
             digital products.
@@ -100,7 +100,7 @@ export default function LandingHero() {
           </div>
 
           {/* Floating badge: availability */}
-          <div className="absolute -left-6 bottom-6 flex animate-float items-center gap-2 rounded-full border border-surface-border bg-neutral-950/90 px-4 py-2 shadow-soft backdrop-blur">
+          <div className="absolute left-2 bottom-6 flex animate-float items-center gap-2 rounded-full border border-surface-border bg-neutral-950/90 px-4 py-2 shadow-soft backdrop-blur sm:-left-6">
             <span className="relative flex size-2">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand opacity-75" />
               <span className="relative inline-flex size-2 rounded-full bg-brand" />
@@ -112,7 +112,7 @@ export default function LandingHero() {
 
           {/* Floating badge: role chip */}
           <div
-            className="absolute -right-4 top-6 flex animate-float items-center gap-1.5 rounded-2xl border border-brand/30 bg-neutral-950/90 px-3 py-2 shadow-soft backdrop-blur"
+            className="absolute right-2 top-6 flex animate-float items-center gap-1.5 rounded-2xl border border-brand/30 bg-neutral-950/90 px-3 py-2 shadow-soft backdrop-blur sm:-right-4"
             style={{ animationDelay: "1.5s" }}
           >
             <Sparkles className="size-4 text-brand" />

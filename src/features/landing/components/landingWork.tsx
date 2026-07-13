@@ -56,14 +56,14 @@ export default function LandingWork() {
         }));
 
   return (
-    <section id="work" className="scroll-mt-28 px-6 py-20 lg:px-12 xl:px-20">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12 xl:px-20">
+    <section id="work" className="scroll-mt-28 py-20">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="mb-2 font-mono text-sm font-medium uppercase tracking-widest text-brand">
               EXPERIENCE
             </p>
-            <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            <h2 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
               Experience <span className="text-brand">&amp; Projects</span>
             </h2>
           </div>
@@ -121,7 +121,7 @@ export default function LandingWork() {
 
                 <div
                   className={cn(
-                    "w-[85vw] shrink-0 snap-start rounded-2xl border p-6 lg:grid lg:w-auto lg:shrink lg:grid-cols-[1fr_260px] lg:gap-6 sm:h-56",
+                    "flex w-[85vw] shrink-0 snap-start flex-col gap-6 rounded-2xl border p-6 lg:grid lg:h-56 lg:w-auto lg:shrink lg:grid-cols-[1fr_260px]",
                     row.highlighted ? "border-brand/50" : "border-surface-border",
                   )}
                 >
@@ -152,15 +152,18 @@ export default function LandingWork() {
                     </p>
                   </div>
 
-                  <div className="relative aspect-video sm:aspect-auto sm:h-full">
-                    {/* Stacked photo effect: two tilted decoy frames peeking out behind the real image */}
-                    <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-6 overflow-hidden rounded-xl border border-surface-border bg-neutral-900 opacity-50 grayscale">
+                  <div className="relative aspect-video lg:aspect-auto lg:h-full">
+                    {/* Stacked photo effect: two tilted decoy frames peeking out behind the real image.
+                        [-webkit-mask-image] forces Safari onto its correct compositing path for
+                        rounded-corner + overflow-hidden layers, which otherwise render blurry during
+                        momentum scroll on iOS. */}
+                    <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-6 overflow-hidden rounded-xl border border-surface-border bg-neutral-900 opacity-80 [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
                       <Image src={row.image} alt="" fill className="object-cover" />
                     </div>
-                    <div className="absolute inset-0 -translate-x-2 translate-y-2 -rotate-3 overflow-hidden rounded-xl border border-surface-border bg-neutral-900 opacity-75 grayscale">
+                    <div className="absolute inset-0 -translate-x-2 translate-y-2 -rotate-3 overflow-hidden rounded-xl border border-surface-border bg-neutral-900 opacity-90 [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
                       <Image src={row.image} alt="" fill className="object-cover" />
                     </div>
-                    <div className="absolute inset-0 overflow-hidden rounded-xl border border-surface-border shadow-card">
+                    <div className="absolute inset-0 overflow-hidden rounded-xl border border-surface-border shadow-card [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
                       <Image
                         src={row.image}
                         alt={row.title}

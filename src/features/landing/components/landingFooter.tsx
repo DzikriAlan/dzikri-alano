@@ -1,5 +1,13 @@
 // 1. Import External Library
-import { Github, Linkedin, Mail, Globe } from "lucide-react";
+import { Github, Linkedin, Mail, Instagram } from "lucide-react";
+
+// 7. Static Data (cont.)
+const socialLinks = [
+  { href: "https://github.com/DzikriAlan", label: "Github", icon: Github },
+  { href: "https://www.linkedin.com/in/dzikri-alan/", label: "LinkedIn", icon: Linkedin },
+  { href: "https://www.instagram.com/_dzikrialan/", label: "Instagram", icon: Instagram },
+  { href: "mailto:dzikrialan0@gmail.com", label: "Email", icon: Mail },
+];
 
 // 7. Static Data
 import {
@@ -10,11 +18,11 @@ import {
 
 export default function LandingFooter() {
   return (
-    <footer className="border-t border-surface-border/60 px-6 py-16 lg:px-12 xl:px-20">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-12 xl:px-20">
+    <footer className="border-t border-surface-border/60 py-16">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:px-12 xl:px-20">
         <div>
           <p className="text-lg font-bold text-foreground">
-            <span className="text-brand">D</span> DzikriAlan
+            Dzikrialan
           </p>
           <p className="mt-3 max-w-xs text-sm text-neutral-400">
             Building digital products with clean code and great user
@@ -60,23 +68,23 @@ export default function LandingFooter() {
         </div>
       </div>
 
-      <div className="mx-auto mt-12 flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-surface-border/60 px-6 pt-6 sm:flex-row lg:px-12 xl:px-20">
+      <div className="mx-auto mt-12 flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-surface-border/60 px-6 pt-6 sm:flex-row sm:px-8 lg:px-12 xl:px-20">
         <p className="text-xs text-neutral-500">
           © 2026 Dzikri Alan. All rights reserved.
         </p>
         <div className="flex gap-4 text-neutral-400">
-          <a href="#contact" aria-label="Github">
-            <Github className="size-4" />
-          </a>
-          <a href="#contact" aria-label="LinkedIn">
-            <Linkedin className="size-4" />
-          </a>
-          <a href="#contact" aria-label="Email">
-            <Mail className="size-4" />
-          </a>
-          <a href="#contact" aria-label="Website">
-            <Globe className="size-4" />
-          </a>
+          {socialLinks.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              className="hover:text-foreground"
+            >
+              <social.icon className="size-4" />
+            </a>
+          ))}
         </div>
       </div>
     </footer>
