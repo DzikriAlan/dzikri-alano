@@ -69,4 +69,7 @@
   p {
     @apply font-light;
   }
+  ::selection {
+    @apply bg-brand text-neutral-950;
+  }
 }

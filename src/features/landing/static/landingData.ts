@@ -2,6 +2,7 @@ import { Star, CheckCircle2, Layers } from "lucide-react";
 
 import blayerPorto from "@/shared/assets/blayer-porto.webp";
 import chaplinPorto from "@/shared/assets/chaplin-porto.webp";
+import abdulhadiAvatar from "@/shared/assets/abdulhadi.webp";
 
 export const landingHighlights = [
   { icon: Star, title: "3+ Years", subtitle: "Experience" },
@@ -173,6 +174,14 @@ export const landingTestimonials = [
     name: "Aulia Harvy",
     role: "CEO, Surya Microsystems International",
     linkedinUrl: "https://id.linkedin.com/in/auliaharvy",
+  },
+  {
+    quote:
+      "He has a strong sense of curiosity and is always eager to learn and grow. His frontend skills are excellent, and he's also a capable full-stack engineer. He's easy to work with, an effective team player, and even in high-pressure situations, he helps keep discussions calm and productive. On top of that, he has a strong sense of ownership—once he takes responsibility for something, he makes sure it's delivered well.\n\nI'm confident he'll continue to grow and become an even stronger, well-rounded engineer in the future.",
+    name: "Muhammad Abdulhadi",
+    role: "AI Engineer, Frisidea Tech",
+    linkedinUrl: "https://www.linkedin.com/in/muhammad-abdulhadi-756167212/",
+    avatar: abdulhadiAvatar,
   },
 ];
 

@@ -115,7 +115,7 @@ export default function LandingOverview() {
               <span className="mb-4 block text-3xl font-serif text-brand">
                 &ldquo;
               </span>
-              <p className="text-lg leading-relaxed text-foreground sm:text-xl">
+              <p className="whitespace-pre-line text-lg leading-relaxed text-foreground sm:text-xl">
                 {testimonial.quote}
               </p>
             </div>
@@ -125,12 +125,24 @@ export default function LandingOverview() {
                 href={testimonial.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group"
+                className="group flex items-center gap-3"
               >
-                <p className="text-sm font-semibold text-foreground group-hover:text-brand group-hover:underline">
-                  {testimonial.name}
-                </p>
-                <p className="text-xs text-neutral-300">{testimonial.role}</p>
+                {"avatar" in testimonial && testimonial.avatar && (
+                  <div className="relative size-9 shrink-0 overflow-hidden rounded-full border border-surface-border bg-neutral-900">
+                    <Image
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div>
+                  <p className="text-sm font-semibold text-foreground group-hover:text-brand group-hover:underline">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-xs text-neutral-300">{testimonial.role}</p>
+                </div>
               </a>
 
               <div className="flex items-center gap-4">
