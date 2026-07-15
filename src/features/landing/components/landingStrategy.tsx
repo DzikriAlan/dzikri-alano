@@ -44,9 +44,9 @@ export default function LandingStrategy() {
   });
 
   return (
-    <section id="strategy" className="scroll-mt-28 py-20 sm:py-28">
+    <section id="strategy" className="relative z-10 scroll-mt-28 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
-        <p className="mb-10 font-mono text-sm font-medium uppercase tracking-widest text-neutral-500">
+        <p className="mb-10 font-mono text-sm font-medium uppercase tracking-widest text-neutral-200 [text-shadow:0_0_12px_rgba(229,229,229,0.6)]">
           Strategy
         </p>
 

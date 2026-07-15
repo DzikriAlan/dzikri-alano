@@ -7,6 +7,8 @@ import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 
 // 5. Import Reusable Component
 import { Button } from "@/components/ui/button";
+import ParticleFieldLazy from "@/shared/components/ParticleFieldLazy";
+import { PARTICLE_THEME } from "@/shared/components/ParticleField";
 
 // 7. Static Data
 import { landingSkills, landingTestimonials } from "../static/landingData";
@@ -64,8 +66,16 @@ export default function LandingOverview() {
   });
 
   return (
-    <section id="overview" className="scroll-mt-28 pb-20 pt-8 sm:pt-12 lg:py-20">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
+    <section id="overview" className="relative scroll-mt-28 overflow-hidden pb-20 pt-8 sm:pt-12 lg:py-20">
+      <ParticleFieldLazy
+        {...PARTICLE_THEME}
+        density={700}
+        speed={0.4}
+        particleSize={0.022}
+        withCube
+        cubeSeed={1}
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
           {/* Intro card */}
           <div className="flex flex-col justify-between rounded-2xl border border-surface-border bg-black p-6 lg:col-span-1">

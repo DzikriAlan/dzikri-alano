@@ -11,7 +11,7 @@ const socialLinks = [
 
 export default function LandingFooter() {
   return (
-    <footer className="border-t border-surface-border/60 bg-black py-24 sm:py-32">
+    <footer className="relative z-10 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <h2 className="max-w-2xl text-3xl font-normal leading-tight text-foreground sm:text-4xl lg:text-5xl">
           It&apos;s time to build your next web project. Let&apos;s work

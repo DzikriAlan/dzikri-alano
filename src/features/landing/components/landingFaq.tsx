@@ -17,9 +17,9 @@ export default function LandingFaq() {
   };
 
   return (
-    <section id="faq" className="scroll-mt-28 py-20">
+    <section id="faq" className="relative z-10 scroll-mt-28 py-20">
       <div className="mx-auto max-w-3xl px-6 sm:px-8 lg:px-12 xl:px-20">
-        <p className="mb-6 font-mono text-sm uppercase tracking-widest text-neutral-500">
+        <p className="mb-6 font-mono text-sm uppercase tracking-widest text-neutral-200 [text-shadow:0_0_12px_rgba(229,229,229,0.6)]">
           Frequently asked questions
         </p>
 
