@@ -165,10 +165,10 @@ export const landingProjects = [
 export const landingTestimonials = [
   {
     quote:
-      "Dzikri is a reliable community partner — always ready to collaborate on projects and bring solid frontend execution to whatever we're building together.",
-    name: "Farhan Muhamad",
-    role: "Founder, Copetera",
-    linkedinUrl: "https://id.linkedin.com/in/farhan-muhamad",
+      "I had a great experience working with Dzikri. He consistently delivered clean, high-quality work and demonstrated strong technical skills. Communication was always clear and professional, making collaboration smooth and efficient. Dzikri is reliable, easy to work with, and always committed to delivering the best results. I highly recommend him for any team or project.",
+    name: "Farhan Muhamad S.",
+    role: "Founder, Coptera Career",
+    linkedinUrl: "https://www.linkedin.com/in/farhan-muhamad/",
     avatar: farhanmuhammadAvatar,
   },
   {
