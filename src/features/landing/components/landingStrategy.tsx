@@ -4,6 +4,10 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 
+// 5. Import Reusable Component
+import ParticleFieldLazy from "@/shared/components/ParticleFieldLazy";
+import { PARTICLE_THEME } from "@/shared/components/ParticleField";
+
 const paragraphs = [
   "I build frontend experiences that are fast, scalable, and made to last. Using Vue, Next.js, React, and AI tooling, I ensure they perform reliably across real-time data streams and complex integrations.",
   "Whether it's an AI chat interface, a data visualization dashboard, or a full-stack product, I design and develop with a focus on performance, maintainability, and developer experience.",
@@ -44,8 +48,16 @@ export default function LandingStrategy() {
   });
 
   return (
-    <section id="strategy" className="relative z-10 scroll-mt-28 py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
+    <section id="strategy" className="relative scroll-mt-28 overflow-hidden py-20 sm:py-28">
+      <ParticleFieldLazy
+        {...PARTICLE_THEME}
+        density={700}
+        speed={0.4}
+        particleSize={0.022}
+        withCube
+        cubeSeed={2}
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <p className="mb-10 font-mono text-sm font-medium uppercase tracking-widest text-neutral-200 [text-shadow:0_0_12px_rgba(229,229,229,0.6)]">
           Strategy
         </p>

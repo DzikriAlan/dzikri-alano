@@ -64,7 +64,7 @@ function ScrollCube({ color, clickTarget, seed }: ScrollCubeProps) {
   const clickState = useRef<{ x: number; y: number; startedAt: number } | null>(null);
   const lastClickId = useRef<number | null>(null);
 
-  const scale = Math.min(viewport.width, viewport.height) * 0.14;
+  const scale = viewport.height * 0.14;
   // Sweep amplitude spans nearly the full section, edge to edge.
   const sweepX = viewport.width * 0.42;
   const sweepY = viewport.height * 0.3;
@@ -197,7 +197,7 @@ function Field({ color, secondaryColor, count, speed, interactive, particleSize 
   });
 
   return (
-    <points ref={pointsRef} scale={[viewport.width / 10, viewport.width / 10, 1]}>
+    <points ref={pointsRef} scale={[viewport.height / 8, viewport.height / 8, 1]}>
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
         <bufferAttribute attach="attributes-color" args={[colors, 3]} />

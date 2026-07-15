@@ -1,6 +1,10 @@
 // 1. Import External Library
 import { Github, Linkedin, Mail, Instagram } from "lucide-react";
 
+// 5. Import Reusable Component
+import ParticleFieldLazy from "@/shared/components/ParticleFieldLazy";
+import { PARTICLE_THEME } from "@/shared/components/ParticleField";
+
 // 7. Static Data
 const socialLinks = [
   { href: "https://github.com/DzikriAlan", label: "Github", icon: Github },
@@ -11,8 +15,16 @@ const socialLinks = [
 
 export default function LandingFooter() {
   return (
-    <footer className="relative z-10 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
+    <footer className="relative overflow-hidden py-24 sm:py-32">
+      <ParticleFieldLazy
+        {...PARTICLE_THEME}
+        density={700}
+        speed={0.4}
+        particleSize={0.022}
+        withCube
+        cubeSeed={4}
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-20">
         <h2 className="max-w-2xl text-3xl font-normal leading-tight text-foreground sm:text-4xl lg:text-5xl">
           It&apos;s time to build your next web project. Let&apos;s work
           together and deliver success.
