@@ -28,6 +28,7 @@ const frontendSkills = landingSkills.filter((skill) =>
 );
 
 const AI_PROFICIENCY_SCORE = 90;
+const TESTIMONIAL_AUTOPLAY_INTERVAL_MS = 6000;
 
 export default function LandingOverview() {
   // 8. State
@@ -40,6 +41,13 @@ export default function LandingOverview() {
     const timer = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setActiveTestimonial((index) => (index + 1) % landingTestimonials.length);
+    }, TESTIMONIAL_AUTOPLAY_INTERVAL_MS);
+    return () => clearTimeout(timer);
+  }, [activeTestimonial]);
 
   // 11. Methods / Handlers
   const handlePrevTestimonial = () => {
@@ -161,7 +169,7 @@ export default function LandingOverview() {
                     />
                   ))}
                 </div>
-                <div className="hidden gap-2 sm:flex">
+                <div className="flex gap-2">
                   <button
                     type="button"
                     onClick={handlePrevTestimonial}
